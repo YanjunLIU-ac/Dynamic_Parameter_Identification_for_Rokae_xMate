@@ -8,9 +8,9 @@
 % pnum_min = 70;
 % 
 % %% REMEMBER MANUALLY:
-% % modify inf/nan substitution in `least_square_estimation.m`
-% % copy `..\excitation\utils\min_regressor.m` to `.\utils\min_regressor.m`
-% % check Système International d'Unités of {DH, G} in 
+% % 1. modify inf/nan substitution in `least_square_estimation.m`
+% % 2. copy `..\excitation\utils\min_regressor.m` to `.\utils\min_regressor.m`
+% % 3. check Système International d'Unités of {DH, G} in 
 % % - `miniparam_inverse_dynamics.m`
 % % - `least_square_estimation_syms.m` or `least_square_estimation_math.m` 
 % % - `.\utils\min_regressor.m`

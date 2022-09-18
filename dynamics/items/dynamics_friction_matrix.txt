@@ -1,1 +1,0 @@
-F1=dQ1*fv1 + fc1*sign(dQ1)F2=dQ2*fv2 + fc2*sign(dQ2)F3=dQ3*fv3 + fc3*sign(dQ3)F4=dQ4*fv4 + fc4*sign(dQ4)F5=dQ5*fv5 + fc5*sign(dQ5)F6=dQ6*fv6 + fc6*sign(dQ6)F7=dQ7*fv7 + fc7*sign(dQ7)

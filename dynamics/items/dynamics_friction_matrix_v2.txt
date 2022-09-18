@@ -1,7 +1,0 @@
-	frictionMat(0) = dQ1*fv1 + fc1*sign(dQ1);
-	frictionMat(1) = dQ2*fv2 + fc2*sign(dQ2);
-	frictionMat(2) = dQ3*fv3 + fc3*sign(dQ3);
-	frictionMat(3) = dQ4*fv4 + fc4*sign(dQ4);
-	frictionMat(4) = dQ5*fv5 + fc5*sign(dQ5);
-	frictionMat(5) = dQ6*fv6 + fc6*sign(dQ6);
-	frictionMat(6) = dQ7*fv7 + fc7*sign(dQ7);

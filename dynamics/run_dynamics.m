@@ -31,10 +31,10 @@
 % save('.\data\mat\dyn_param_linearization.mat')
 % save('.\data\mat\regressor.mat', 'W');
 
-% MANUALLY:
-% modify Système International d'Unités of {DH, G} in `dyn_minimal_param_math.m`, `dyn_minimal_param_syms.m` and `utils\regressor.m`
-% copy scripts in `data\txt\dyn_param_linearization.txt` to `utils\regressor.m`
-% modify inf/nan substitution in `dyn_minimal_syms.m` (line 62)
+%% MANUALLY:
+% 1. modify Système International d'Unités of {DH, G} in `dyn_minimal_param_math.m`, `dyn_minimal_param_syms.m` and `utils\regressor.m`
+% 2. copy scripts in `data\txt\dyn_param_linearization.txt` to `utils\regressor.m`
+% 3. modify inf/nan substitution in `dyn_minimal_syms.m` (line 62)
 
 %% PART 1-B: DEDUCE ROBOT DYNAMICS
 % dyn_minimal_param_syms;
