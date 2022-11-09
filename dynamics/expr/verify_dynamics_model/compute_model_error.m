@@ -24,8 +24,7 @@ for kk = 1:200
     disp(['FIGURING OUT No.', num2str(kk), ' point!']);
     % computation method
     % T_idy(kk, :) = NewtonEuler_syms(q_ds(kk, :), qd_ds(kk, :), qdd_ds(kk, :));
-    
-    T_idy(kk, :) = NewtonEuler91(q_ds(kk, :), qd_ds(kk, :), qdd_ds(kk, :), "P_link");
+    T_idy(kk, :) = NewtonEuler91(q_ds(kk, :), qd_ds(kk, :), qdd_ds(kk, :), "P_link") * 1e-3;
     %% filtering
     if (kk > 1)
         T_idy_filt(kk, :) = b0 * T_idy(kk, :) + b1 * T_idy(kk-1, :) + a0 * T_idy_filt(kk-1, :);
@@ -43,7 +42,7 @@ for ii = 1:7
     plot(n, t_filt(:, ii), 'b'); hold on;
     plot(n, T_idy(:, ii), 'r');
     plot(n, t_filt(:, ii) - T_idy(:, ii), 'g'); hold off;
-    % legend('采样力矩', '辨识力矩', '相对误差', 'FontName', '宋体', 'FontSize', 12);
+    legend('采样力矩', '辨识力矩', '相对误差', 'FontName', '宋体', 'FontSize', 12);
     ylabel('力矩(Nm)', 'FontSize', 17, 'FontName', '宋体');
     title(['第', num2str(ii), '关节力矩前馈误差'], 'FontSize', 17, 'FontName', '宋体');
     % print(ii, '-dpng', '-r600', ['.\figs\第', num2str(ii), '关节辨识参数验证'])

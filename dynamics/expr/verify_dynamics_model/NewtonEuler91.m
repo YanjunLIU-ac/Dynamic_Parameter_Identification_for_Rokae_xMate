@@ -17,7 +17,7 @@ dQ5 = qd(5); ddQ5 = qdd(5);
 dQ6 = qd(6); ddQ6 = qdd(6);
 dQ7 = qd(7); ddQ7 = qdd(7);
 
-g = 9.802; d1 = 0.3415; d3 = 0.3940; d5 = 0.366; d7 = 0.2503; % in m
+g = 9802; d1 = 341.5; d3 = 394.0; d5 = 366; d7 = 250.3; % in mm
 fe1 = 0; fe2 = 0; fe3 = 0; ne1 = 0; ne2 = 0; ne3 = 0;
 
 %% STANDARD SET BY P_link
@@ -174,30 +174,30 @@ Pc7 = [mc71; mc72; mc73];
 
 % inertia matrix w.r.t. CoM
 if (mode == "P_center")
-Ic1 = [Ic111 Ic112 Ic113; Ic112 Ic122 Ic123; Ic113 Ic123 Ic133]; 
-Ic2 = [Ic211 Ic212 Ic213; Ic212 Ic222 Ic223; Ic213 Ic223 Ic233]; 
-Ic3 = [Ic311 Ic312 Ic313; Ic312 Ic322 Ic323; Ic313 Ic323 Ic333]; 
-Ic4 = [Ic411 Ic412 Ic413; Ic412 Ic422 Ic423; Ic413 Ic423 Ic433]; 
-Ic5 = [Ic511 Ic512 Ic513; Ic512 Ic522 Ic523; Ic513 Ic523 Ic533];
-Ic6 = [Ic611 Ic612 Ic613; Ic612 Ic622 Ic623; Ic613 Ic623 Ic633]; 
-Ic7 = [Ic711 Ic712 Ic713; Ic712 Ic722 Ic723; Ic713 Ic723 Ic733]; 
+    Ic1 = [Ic111 Ic112 Ic113; Ic112 Ic122 Ic123; Ic113 Ic123 Ic133]; 
+    Ic2 = [Ic211 Ic212 Ic213; Ic212 Ic222 Ic223; Ic213 Ic223 Ic233]; 
+    Ic3 = [Ic311 Ic312 Ic313; Ic312 Ic322 Ic323; Ic313 Ic323 Ic333]; 
+    Ic4 = [Ic411 Ic412 Ic413; Ic412 Ic422 Ic423; Ic413 Ic423 Ic433]; 
+    Ic5 = [Ic511 Ic512 Ic513; Ic512 Ic522 Ic523; Ic513 Ic523 Ic533];
+    Ic6 = [Ic611 Ic612 Ic613; Ic612 Ic622 Ic623; Ic613 Ic623 Ic633]; 
+    Ic7 = [Ic711 Ic712 Ic713; Ic712 Ic722 Ic723; Ic713 Ic723 Ic733]; 
 elseif (mode == "P_link")
 % inertia matrix w.r.t. CoM
-I = eye(3);
-Io1 = [Io111 Io112 Io113; Io112 Io122 Io123; Io113 Io123 Io133]; 
-Io2 = [Io211 Io212 Io213; Io212 Io222 Io223; Io213 Io223 Io233]; 
-Io3 = [Io311 Io312 Io313; Io312 Io322 Io323; Io313 Io323 Io333]; 
-Io4 = [Io411 Io412 Io413; Io412 Io422 Io423; Io413 Io423 Io433]; 
-Io5 = [Io511 Io512 Io513; Io512 Io522 Io523; Io513 Io523 Io533];
-Io6 = [Io611 Io612 Io613; Io612 Io622 Io623; Io613 Io623 Io633]; 
-Io7 = [Io711 Io712 Io713; Io712 Io722 Io723; Io713 Io723 Io733]; 
-Ic1 = Io1 - m1 * (Pc1' * Pc1 * I - Pc1 * Pc1');
-Ic2 = Io2 - m2 * (Pc2' * Pc2 * I - Pc2 * Pc2');
-Ic3 = Io3 - m3 * (Pc3' * Pc3 * I - Pc3 * Pc3');
-Ic4 = Io4 - m4 * (Pc4' * Pc4 * I - Pc4 * Pc4');
-Ic5 = Io5 - m5 * (Pc5' * Pc5 * I - Pc5 * Pc5');
-Ic6 = Io6 - m6 * (Pc6' * Pc6 * I - Pc6 * Pc6');
-Ic7 = Io7 - m7 * (Pc7' * Pc7 * I - Pc7 * Pc7');
+    I = eye(3);
+    Io1 = [Io111 Io112 Io113; Io112 Io122 Io123; Io113 Io123 Io133]; 
+    Io2 = [Io211 Io212 Io213; Io212 Io222 Io223; Io213 Io223 Io233]; 
+    Io3 = [Io311 Io312 Io313; Io312 Io322 Io323; Io313 Io323 Io333]; 
+    Io4 = [Io411 Io412 Io413; Io412 Io422 Io423; Io413 Io423 Io433]; 
+    Io5 = [Io511 Io512 Io513; Io512 Io522 Io523; Io513 Io523 Io533];
+    Io6 = [Io611 Io612 Io613; Io612 Io622 Io623; Io613 Io623 Io633]; 
+    Io7 = [Io711 Io712 Io713; Io712 Io722 Io723; Io713 Io723 Io733]; 
+    Ic1 = Io1 - m1 * (Pc1' * Pc1 * I - Pc1 * Pc1');
+    Ic2 = Io2 - m2 * (Pc2' * Pc2 * I - Pc2 * Pc2');
+    Ic3 = Io3 - m3 * (Pc3' * Pc3 * I - Pc3 * Pc3');
+    Ic4 = Io4 - m4 * (Pc4' * Pc4 * I - Pc4 * Pc4');
+    Ic5 = Io5 - m5 * (Pc5' * Pc5 * I - Pc5 * Pc5');
+    Ic6 = Io6 - m6 * (Pc6' * Pc6 * I - Pc6 * Pc6');
+    Ic7 = Io7 - m7 * (Pc7' * Pc7 * I - Pc7 * Pc7');
 end
 % external force/torque acting on ee
 fe = [fe1; fe2; fe3]; ne = [ne1; ne2; ne3];

@@ -5,13 +5,14 @@
 % @param[out] pnum_min: volume of minimal parameter set
 % @param[out] R1: matrix consisting of independent columns
 % @param[out] R2: matrix consisting of dependent columns
+% @note: Unit:mm(Nmm) is used throughout the project.
 function [W_min, min_param_ind, pnum_min, R1, R2] = dyn_minimal_param_math()
 
 addpath('.\utils')
 %% PARAMETER
 % DH and load parameters
 fe1 = 0; fe2 = 0; fe3 = 0; ne1 = 0; ne2 = 0; ne3 = 0;
-d1 = 0.3415; d3 = 0.3940; d5 = 0.366; d7 = 0.2503; g = 9.802; % in m
+d1 = 341.5; d3 = 394.0; d5 = 366; d7 = 250.3; g = 9802; % in mm
 % number of dynamic parameters
 % m, mc1, mc2, mc3, Ioxx, Ioyy, Iozz, Ioxy, Ioxz, Ioyz, Ia, fv, fc
 pnum_sum = evalin('base', 'pnum_sum');
@@ -109,6 +110,7 @@ for i = 1:7
 end
 fclose(fid);
 
+%% RETURN VARIABLE TO BASE WORKSPACE
 assignin('base', 'W_min', W_min);
 assignin('base', 'min_param_ind', min_param_ind);
 assignin('base', 'pnum_min', pnum_min);

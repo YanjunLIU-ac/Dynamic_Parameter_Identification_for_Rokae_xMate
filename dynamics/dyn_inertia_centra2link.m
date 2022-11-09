@@ -5,6 +5,7 @@
 %         {m, mc1, mc2, mc3, Ic11, Ic22, Ic33, Ic12, Ic13, Ic23, Ia, fv, fc}
 %         while linkTAU consists of dynamic parameters
 %         {m, mc1, mc2, mc3, Io11, Io22, Io33, Io12, Io13, Io23, Ia, fv, fc}
+% @notes: Unit:mm(Nmm) is used throughout the project.
 
 %% PARAMETERS
 % inertia tensor w.r.t. link

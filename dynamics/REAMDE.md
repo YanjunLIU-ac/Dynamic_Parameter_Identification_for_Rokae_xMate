@@ -14,7 +14,7 @@ This directory contains all the necessary theoretical formulation and deduction 
 * `dyn_param_linearization.m`:  
    Linearize dynamics equation and obtain regression matrix (W) which satisfys Wd=τ, d being the dynamic parameters.
 * `dyn_minimal_param_syms.m`:  
-   Apply QR decomposition to obtain minimal regression matrix (W_min) based on symbolic calculation.
+   Apply QR decomposition to obtain minimal regression matrix (W_min) based on symbolic calculation. (m, Nm)
    (alternative: `dyn_minimal_param_math.m` based on arithmetic expression for faster computation)
 * `dyn_mapping_Pmin2P.m`:  
    Map minimal parameter set (P_min) to centra-based standard set (P_center) and link-based standard set (P_link).  

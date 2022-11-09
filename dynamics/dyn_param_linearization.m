@@ -4,6 +4,7 @@
 % @notes: W is regression matrix, a nonlinear matrix only relative to [q, qd, qdd], with shape(7, 13x7)
 %         P is standard set of dynamic parameter, with shape(13x7, 1)
 %         (Refer to `Study on Parameter Identification for Rokae XB4`)
+% @notes: Unit:mm(Nmm) is used throughout the project.
 
 %% PARAMETER
 % number of dynamic parameter for each joint

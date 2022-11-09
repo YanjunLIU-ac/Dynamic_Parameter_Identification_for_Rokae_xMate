@@ -6,6 +6,7 @@
 % 		1. Iterative Netwon-Euler Dynamic Formulation; 
 % 		2. Modified D-H modelling scheme for Pmn & Rmn,
 % 		3. Central inertial notation Icmn for link inertial
+%       4. Unit:mm(Nmm) is used throughout this project.
 
 %% PARAMETERS
 % sine and cosine of joint angle

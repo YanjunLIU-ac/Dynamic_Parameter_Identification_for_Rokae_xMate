@@ -23,7 +23,7 @@ for k = 1:1:n
 	qdd = qdd_filt(k, :);
 	
 	T(k, :) = t_filt(k, :);
-	T_idy(k,:) = minparam_inverse_dynamics(q, qd, qdd, "math")';
+	T_idy(k,:) = minparam_inverse_dynamics(q, qd, qdd, "math")' * 1e-3;
 end
 
 %% VISUALIZATION

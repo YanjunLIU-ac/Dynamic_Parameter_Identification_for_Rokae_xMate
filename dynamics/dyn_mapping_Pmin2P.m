@@ -1,6 +1,6 @@
 %% dyn_mapping_Pmin2P.m
 % @brief: recover all 91 dynamic parameters from minimal parameter set
-% THEORETICAL REDUCTION:
+% THEORETICAL DERIVATION:
 %       W = QR, R = [R1, R2], P = [P1, P2] 
 %       ==> P_min = P1 * (inv(R1) * R2) * P2
 %   While finding P (full param set) from P_min (minimal param set), there 
@@ -10,6 +10,7 @@
 % arbitrarily, which is defined as 0.001 here. THEN, all we have to do
 % before figuring out P is to obtain the values of P1.
 % ==> P1 = P_min - (inv(R1) * R2) * P2
+% @note: Unit:mm is used throughout the project.
 function dyn_mapping_Pmin2P()
 
 %% PARAMETERS
@@ -29,7 +30,7 @@ P_link = zeros(pnum_sum, 1);
 P2 = zeros(pnum_sum - pnum_min, 1);
 
 %% FIGURE OUT P2 (given m=0.01 here)
-m = [0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01] * 0.1;
+m = [10, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01] * 45;
 cnt2 = 0;   % counter for P2
 cntm = 0;   % counter for mass
 for ii = 1:pnum_sum
@@ -86,6 +87,7 @@ for kk = 1:7
     P_center(ind+2:ind+4) = P_center(ind+2:ind+4) / m_;
 end
 
+%% SAVE TO TXT
 fid = fopen('.\data\txt\P_center.txt', 'w');
 fprintf(fid, 'P_center = [');
 for j = 1:pnum_min
@@ -100,5 +102,6 @@ for j = 1:pnum_min
 end
 fprintf(fid, '];');
 
+%% SAVE VARIABLE TO BASE WORKSPACE
 assignin('base', 'P_link', P_link)
 assignin('base', 'P_center', P_center)

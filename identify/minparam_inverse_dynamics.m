@@ -27,7 +27,7 @@ if mode == "syms"
     dQ7 = qd(7); ddQ7 = qdd(7);
     % DH and load parameters
     fe1 = 0; fe2 = 0; fe3 = 0; ne1 = 0; ne2 = 0; ne3 = 0;
-    d1 = 0.3415; d3 = 0.3940; d5 = 0.366; d7 = 0.2503; g = 9.802; % in mm
+    d1 = 341.5; d3 = 394.0; d5 = 366; d7 = 250.3; g = 9802; % in mm
     
     %% FORWARD
     W_mins = eval(subs(W_min,{'s1', 'c1', 's2', 'c2', 's3', 'c3', 's4', 'c4', 's5', 'c5', 's6', 'c6', 's7', 'c7', ...

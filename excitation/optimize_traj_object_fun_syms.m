@@ -12,9 +12,9 @@ fe1 = 0; fe2 = 0; fe3 = 0; ne1 = 0; ne2 = 0; ne3 = 0;
 % d3 = evalin('base', 'dd3');
 % d5 = evalin('base', 'dd5');
 % d7 = evalin('base', 'dd7');
-d1 = 0.3415; d3 = 0.394; d5 = 0.366; d7 = 0.2503;
+d1 = 341.5; d3 = 394; d5 = 366; d7 = 250.3;
 % gravitional acceleration
-g = 9.802;   % in mm
+g = 9802;   % in mm
 % trajectory parameters
 traj_wf = evalin('base', 'traj_wf');
 traj_Ts = evalin('base', 'traj_Ts');
