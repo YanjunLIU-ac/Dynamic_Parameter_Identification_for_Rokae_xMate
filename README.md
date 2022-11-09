@@ -35,7 +35,7 @@ See `./filtering/README.md` and `run_filtering.m` for details.
 See `./identify/README.md` and `run_identify.m` for details.
 
 ## Usage scenarios:
-* Identification pipeline:
+### Identification pipeline:
 <div align="center">
   <img src="flowchart.png" height=500>
 </div>
@@ -47,12 +47,12 @@ See `./identify/README.md` and `run_identify.m` for details.
 5. Map minimum paramset to standard paramset: `run_dynamics.m` PART-II.
 6. [OPTIONAL] Test the performance of identified dynamics model with standard paramset: `run_dynamics.m` PART-III.
 
-### Notes:
+Notes:
 1. Keep System of Units consistent throughout the project (mm and Nmm).
 2. Additional adjustment of virtual mass in `dyn_mapping_Pmin2P.m` is needed for better paramset mapping.
 
-* Excitation Trajectory Optimization:
+### Excitation Trajectory Optimization:
   Obtain min regressor matrix in `\dynamics` and then turn to `\excitation`.
  
-* Validation Error Verification:
+### Validation Error Verification:
   Copy raw sensor data in `\filtering` and then turn to `\dynamics`.
