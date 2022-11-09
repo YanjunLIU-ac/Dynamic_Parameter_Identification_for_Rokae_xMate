@@ -39,15 +39,17 @@ See `./identify/README.md` and `run_identify.m` for details.
 <div align="center">
   <img src="flowchart.png" height=500>
 </div>
-- Derive robot dynamics, regressor and minimum paramset: `run_dynamics.m` PART-IA and PART-IB.
-- Optimize excitation trajectory: `run_optimze.m`.
-- Data filtering and processing: `run_filtering.m`.
-- Estimate minimum paramset using LSE: `run_identify.m`.
-- Map minimum paramset to standard paramset: `run_dynamics.m` PART-II.
-- [OPTIONAL] Test the performance of identified dynamics model with standard paramset: `run_dynamics.m` PART-III.
-Notes:
-- Keep System of Units consistent throughout the project (mm and Nmm).
-- Additional adjustment of virtual mass in `dyn_mapping_Pmin2P.m` is needed for better paramset mapping.
+
+1. Derive robot dynamics, regressor and minimum paramset: `run_dynamics.m` PART-IA and PART-IB.
+2. Optimize excitation trajectory: `run_optimze.m`.
+3. Data filtering and processing: `run_filtering.m`.
+4. Estimate minimum paramset using LSE: `run_identify.m`.
+5. Map minimum paramset to standard paramset: `run_dynamics.m` PART-II.
+6. [OPTIONAL] Test the performance of identified dynamics model with standard paramset: `run_dynamics.m` PART-III.
+
+### Notes:
+1. Keep System of Units consistent throughout the project (mm and Nmm).
+2. Additional adjustment of virtual mass in `dyn_mapping_Pmin2P.m` is needed for better paramset mapping.
 
 * Excitation Trajectory Optimization:
   Obtain min regressor matrix in `\dynamics` and then turn to `\excitation`.
