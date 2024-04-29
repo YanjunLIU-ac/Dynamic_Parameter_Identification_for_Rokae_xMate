@@ -59,4 +59,5 @@ Notes:
 
 ### References:
 [1] Yanjun Liu. "Study on Parameter Identification for Rokae XB4," 2019. [link](https://www.jianguoyun.com/p/DUbc1G0QkOm1CRjKi_cEIAA).
+
 [2] Craig, John J. "Introduction to Robotics," 2005.
