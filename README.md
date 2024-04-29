@@ -1,5 +1,5 @@
 # Guidance:
-Dynamic parameter identification code for rokae xmate manipulator based on MATLAB, including excitation trajectory optimization, LSM method, and N-E formulation of dynamic equation.
+Dynamic parameter identification code for rokae xmate manipulator based on MATLAB, including excitation trajectory optimization, LSM method, and Recursive Newton-Euler Algorithm.
 
 ## Project Stucture and Description:
 ### Dynamics: 
@@ -56,3 +56,7 @@ Notes:
  
 ### Validation Error Verification:
   Copy raw sensor data in `\filtering` and then turn to `\dynamics`.
+
+### References:
+[1] Yanjun Liu. "Study on Parameter Identification for Rokae XB4," 2019. [link](https://www.jianguoyun.com/p/DUbc1G0QkOm1CRjKi_cEIAA)
+[2] Craig, John J. "Introduction to Robotics," 2005.
